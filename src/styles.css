@@ -65,10 +65,10 @@
 }
 
 .home{
-  @apply flex justify-between items-center w-full p-10;
+  @apply flex justify-between items-center w-full p-10 ;
 }
 .build{
-  @apply w-full h-auto p-20 block;
+  @apply w-full h-auto p-20 block  ;
 }
 .build-title{
   @apply text-4xl font-semibold text-gray-200 uppercase  leading-6 my-3;
@@ -142,6 +142,17 @@
 }
 .portfolio-image{
   @apply max-w-[500] max-h-[450] rounded-sm shadow-lg shadow-gray-400;
+}
+.portfolio{
+  @apply w-full block ;
+}
+
+.portfolio-title{
+  @apply font-normal uppercase text-sm tracking-widest text-white py-2 w-full flex justify-center;
+}
+
+.portfolio-tag{
+  @apply text-4xl font-bold text-gray-200 my-3 w-full flex justify-center uppercase;
 }
 
 .letter {
