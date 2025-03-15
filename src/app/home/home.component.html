@@ -1,0 +1,63 @@
+<div class="home">
+    <div class="home-intro">
+        <div class="home-block">
+            <p class="home-title">
+                Welcome to my world
+            </p>
+      
+            <h2 class="home-name">
+                Hi, I’m Tapash Paul
+                <br />
+                a 
+                <span class="home-name-uppercase">
+                  <span *ngFor="let letter of letterArray; let i = index" 
+                        class="letter-animation"
+                        [ngStyle]="{'color': letter.color}"
+                        [style.animationDelay]="isRemoving ? (0.1 * (letterArray.length - i)) + 's' : (i * 0.1) + 's'">
+                    {{ letter.char }}
+                  </span>
+                </span>
+              </h2>
+                      
+            <p class="home-details">
+                A professional front-end developer with a passion for building
+                responsive, high-performance websites and applications. With
+                expertise in HTML, CSS, JavaScript, and modern web technologies,
+                I
+                focus on creating seamless, user-friendly, and visually engaging
+                digital experiences.
+            </p>
+
+            <div class="home-link-list ">
+                <div class="home-social-list">
+                    <h6 class="home-tag-title">
+                        Find with me
+                    </h6>
+                    <ul class="home-social-list-block">
+                        <li *ngFor="let icon of socialIcons"
+                            class="home-social-list-block-li">
+                            <i class="home-social-list-block-li-icon fa-brands"
+                                [ngClass]="icon"></i>
+                        </li>
+                    </ul>
+                </div>
+                <div class="home-skill-list">
+                    <h6 class="home-tag-title">
+                        best skill on
+                    </h6>
+                    <ul class="home-social-list-block">
+                        <li *ngFor="let icon of socialIcons"
+                            class="home-social-list-block-li">
+                            <i class="home-social-list-block-li-icon fa-brands"
+                                [ngClass]="icon"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="home-image">
+        <img [src]="portfolio_image" class="portfolio-image" />
+    </div>
+</div>

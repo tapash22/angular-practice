@@ -1,0 +1,17 @@
+<nav
+    class="navigation">
+    <div class="navigation-image">
+        <img [src]="man" alt="Dynamic Image" class="image">
+        <h2 class="title">
+            Tapash paul
+        </h2>
+    </div>
+    <ul class="navigation-list">
+        <li *ngFor="let route of navigationLinks" class="navigation-link">
+            <a [routerLink]="route.path"
+                >
+                {{ route.label }}
+            </a>
+        </li>
+    </ul>
+</nav>
