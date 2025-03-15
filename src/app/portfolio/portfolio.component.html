@@ -1,17 +1,17 @@
 <div class="w-full py-5">
-    <div class="portfolio">
+    <div class="portfolio px-10">
         <h6 class="portfolio-title">
             Visit my portfolio and keep your feedback
         </h6>
         <h2 class="portfolio-tag">
             My Portfolio
         </h2>
-        <div class="card-list px-16">
+        <div class="card-list px-20">
             <div class="card" *ngFor="let demo of demoList">
                 <div
-                    class="w-full h-[220px] overflow-hidden flex justify-center align-middle rounded-xl ring-1">
+                    class="w-full h-[200px] overflow-hidden flex justify-center align-middle  rounded-xl ring-1">
                     <img [src]="demo.image"
-                        class="bg-cover w-full h-full scale-100 hover:scale-110" />
+                        class="bg-cover w-full h-full scale-100  transition-all duration-300 hover:scale-110" />
                 </div>
                 <div class="w-full h-auto my-3 block">
                     <p

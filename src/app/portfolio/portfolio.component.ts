@@ -34,6 +34,27 @@ demoList:any[]=[
     description:'this my website into this i added vue.js tailwind and animation also implement 3d',
     image:this.image3,
     count:55
+  },
+  {
+    id:4,
+    name:'development',
+    description:'this my website into this i added vue.js tailwind and animation also implement 3d',
+    image:this.image1,
+    count:65
+  },
+  {
+    id:5,
+    name:'development',
+    description:'this my website into this i added vue.js tailwind and animation also implement 3d',
+    image:this.image2,
+    count:35
+  },
+  {
+    id:6,
+    name:'development',
+    description:'this my website into this i added vue.js tailwind and animation also implement 3d',
+    image:this.image3,
+    count:55
   }
 ]
 
