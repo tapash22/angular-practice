@@ -67,6 +67,28 @@
 .home{
   @apply flex justify-between items-center w-full p-10;
 }
+.build{
+  @apply w-full h-auto p-20 block;
+}
+.build-title{
+  @apply text-4xl font-semibold text-gray-200 uppercase  leading-6 my-3;
+}
+.card-list{
+  @apply grid grid-cols-3 gap-7 w-full h-full mt-10 ;
+}
+.card{
+  @apply flex flex-col p-5 border border-gray-300 rounded-lg shadow-md overflow-hidden transition-all duration-300 h-[300px] cursor-pointer;
+}
+.card-icon{
+  @apply text-3xl text-gray-200 p-3;
+}
+.card-title{
+  @apply text-xl font-semibold text-white tracking-wider text-wrap py-1 px-2;
+}
+
+.card-des{
+  @apply text-lg font-normal tracking-wide leading-7 text-gray-300 px-2  text-justify;
+}
 .home-intro{
   @apply w-2/4 h-auto p-16 flex justify-center align-middle;
 }

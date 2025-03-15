@@ -1,1 +1,28 @@
-<p>build works!</p>
+<div class="home">
+    <div class="build">
+        <h6 class="home-title">
+            Features
+        </h6>
+        <h2 class="build-title">
+            What I Do
+        </h2>
+        <div class="card-list">
+            <div class="card group" *ngFor="let card of cardList">
+                <div class="w-full h-auto flex justify-start items-center">
+                    <i class="card-icon fa-solid" [ngClass]="card.icon"></i>
+                </div>
+                <h3 class="card-title mt-2">
+                    {{ card.name }}
+                </h3>
+                <p class="card-des my-4">
+                    {{ card.details }}
+                </p>
+                <!-- Arrow with Hover Effect -->
+                <div class="h-0 overflow-hidden transition-all duration-300 group-hover:h-8 flex items-center justify-start ">
+                    <i class="fa-solid fa-arrow-right card-icon transform translate-y-2 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"></i>
+                </div>
+            </div>
+             
+        </div>
+    </div>
+</div>
