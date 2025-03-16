@@ -65,5 +65,5 @@ export class PricingComponent {
     },
   ];
 
-  activeTab = 0;
+  activeTab = 1;
 }
