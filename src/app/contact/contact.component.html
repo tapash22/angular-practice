@@ -1,1 +1,103 @@
-<p>contact works!</p>
+<div class="w-full py-5">
+    <div class="portfolio px-10">
+        <h6 class="portfolio-title">
+            contact
+        </h6>
+        <h2 class="portfolio-tag">
+            contact with me
+        </h2>
+    </div>
+    <div class="contact-body ">
+        <div class="contact-card ">
+            <div
+                class="w-full h-[200px] rounded-xl overflow-hidden shadow-sm shadow-gray-200">
+                <img [src]="contact_image"
+                    class="w-full rounded-xl p-2 transition-all bg-contain scale-75 hover:scale-90 duration-100" />
+            </div>
+            <div class="block w-full h-auto py-4">
+                <h2 class="text-3xl font-bold text-gray-100 tracking-widest ">
+                    Tapash paul
+                </h2>
+                <h6
+                    class="text-xl font-bold text-gray-200 tracking-wide py-3">
+                    Web Developer
+                </h6>
+                <p
+                    class="text-lg font-semibold text-gray-300 tracking-wider leading-6">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ipsam quidem
+                </p>
+                <div class="py-3 w-full block ">
+                    <p
+                        class="text-lg font-normal text-gray-300 tracking-wider flex justify-start items-center gap-3 py-2 ">
+                        <i
+                            class="fa-solid fa-mobile-screen  text-xl font-normal text-gray-200"></i>
+                        +8801674345763
+                    </p>
+                    <p
+                        class="text-lg font-normal text-gray-300 tracking-wider flex justify-start items-center gap-3 py-2 ">
+                        <i
+                            class="fa-regular fa-envelope text-xl font-normal text-gray-200"></i>
+                        {{email}}
+                    </p>
+                </div>
+
+                <div class="home-social-list  ">
+                    <h6 class="home-tag-title">
+                        Find with me
+                    </h6>
+                    <ul class="home-social-list-block">
+                        <li *ngFor="let icon of socialIcons"
+                            class="home-social-list-block-li">
+                            <i class="home-social-list-block-li-icon fa-brands"
+                                [ngClass]="icon"></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="contact-form">
+            <form class="w-full p-3 h-auto">
+                <div class="flex flex-wrap gap-4">
+                    <div class="w-full flex gap-3">
+                        <div class="field w-1/2">
+                            <label class="field-label block mb-1">Your
+                                name</label>
+                            <input class="field-input"
+                                [(ngModel)]="formData.name" name="name" />
+                        </div>
+                        <div class="field w-1/2">
+                            <label class="field-label block mb-1">Phone</label>
+                            <input class="field-input"
+                                [(ngModel)]="formData.phone" name="phone" />
+                        </div>
+                    </div>
+                    <div class="field-full w-full">
+                        <label class="field-label block mb-1">Your email</label>
+                        <input class="field-input" [(ngModel)]="formData.email"
+                            name="email" />
+                    </div>
+                    <div class="field-full w-full">
+                        <label class="field-label block mb-1">Subject</label>
+                        <input class="field-input"
+                            [(ngModel)]="formData.subject" name="subject" />
+                    </div>
+                    <div class="field-full w-full">
+                        <label class="field-label block mb-1">Message</label>
+                        <textarea class="field-input"
+                            [(ngModel)]="formData.message" name="message">
+
+                        </textarea>
+                    </div>
+                </div>
+                <div class="w-full  h-auto my-2">
+                    <button
+                        class="text-xl font-bold bg-gray-950 rounded-xl h-16 text-gray-200 w-full">
+                        submit
+                    </button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
