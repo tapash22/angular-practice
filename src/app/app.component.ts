@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {  NavigationStart, Router, RouterOutlet } from '@angular/router';
 import { NavigationComponent } from './navigation/navigation.component';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { FooterComponent } from './footer/footer.component';
@@ -26,12 +26,12 @@ import { delay } from 'rxjs';
           ], { optional: true }),
 
           query(':enter', [
-            style({ transform: 'translateX(100%)', opacity: 0 }),
-            animate('500ms ease-out', style({ transform: 'translateX(0)', opacity: 1 }))
+            style({ transform: 'translateY(100%)', opacity: 0 }),
+            animate('500ms ease-out', style({ transform: 'translateY(0)', opacity: 1 }))
           ], { optional: true }),
 
           query(':leave', [
-            animate('500ms ease-in', style({ transform: 'translateX(-100%)', opacity: 0 }))
+            animate('500ms ease-in', style({ transform: 'translateY(-100%)', opacity: 0 }))
           ], { optional: true }),
         ])
       ])
@@ -43,11 +43,20 @@ export class AppComponent {
   faCoffee = faCoffee;
   isDarkMode = false;
 
-  constructor() {
+  previousRoute: string = '';
+  currentRoute: string = '';
+  constructor(private router: Router) {
     // Check localStorage for theme preference
     const storedTheme = localStorage.getItem('theme');
     this.isDarkMode = storedTheme === 'dark';
     this.updateTheme();
+
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationStart) {
+        this.previousRoute = this.currentRoute;
+        this.currentRoute = event.url;
+      }
+    });
   }
 
   toggleTheme() {
