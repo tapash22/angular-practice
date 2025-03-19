@@ -1,0 +1,13 @@
+.routing-container {
+    position: relative;
+    width: 100%;
+    height: 90vh; /* Ensure full height */
+    overflow: hidden; /* Prevents flicker */
+  }
+  
+  .routing {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  

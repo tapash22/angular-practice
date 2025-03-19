@@ -10,7 +10,7 @@
     <div class="contact-body ">
         <div class="contact-card ">
             <div
-                class="w-full h-[200px] rounded-xl overflow-hidden shadow-sm shadow-gray-200">
+                class="w-full h-[200px] rounded-xl overflow-hidden shadow-sm my-4 shadow-gray-200">
                 <img [src]="contact_image"
                     class="w-full rounded-xl p-2 transition-all bg-contain scale-75 hover:scale-90 duration-100" />
             </div>
@@ -46,7 +46,7 @@
                     <h6 class="home-tag-title">
                         Find with me
                     </h6>
-                    <ul class="home-social-list-block">
+                    <ul class="home-social-list-block" style="margin-bottom: -2px !important;">
                         <li *ngFor="let icon of socialIcons"
                             class="home-social-list-block-li">
                             <i class="home-social-list-block-li-icon fa-brands"
@@ -57,7 +57,8 @@
             </div>
         </div>
         <div class="contact-form">
-            <form class="w-full p-3 h-auto">
+            <form class="w-full p-5 h-auto">
+
                 <div class="flex flex-wrap gap-4">
                     <div class="w-full flex gap-3">
                         <div class="field w-1/2">
@@ -90,7 +91,7 @@
                         </textarea>
                     </div>
                 </div>
-                <div class="w-full  h-auto my-2">
+                <div class="w-full  h-auto my-4">
                     <button
                         class="text-xl font-bold bg-gray-950 rounded-xl h-16 text-gray-200 w-full">
                         submit
@@ -100,6 +101,5 @@
 
         </div>
     </div>
-
 
 </div>
