@@ -6,12 +6,5 @@
             Tapash paul
         </h2>
     </div>
-    <ul class="navigation-list">
-        <li *ngFor="let route of navigationLinks" class="navigation-link">
-            <a [routerLink]="route.path" routerLinkActive="active"
-                >
-                {{ route.label }}
-            </a>
-        </li>
-    </ul>
+<app-navigation-list [navigationLinks]="navigationLinks"></app-navigation-list>
 </nav>

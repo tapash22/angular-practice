@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { Router, RouterLink,RouterModule  } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { NavigationListComponent } from '../navigation-list/navigation-list.component';
 
 @Component({
   selector: 'app-navigation',
-  imports: [RouterLink,CommonModule,RouterModule ],
+  imports: [CommonModule,NavigationListComponent ],
   templateUrl: './navigation.component.html',
   styleUrl: './navigation.component.css'
 })
@@ -20,6 +21,7 @@ export class NavigationComponent {
     { path: 'pricing', label: 'Pricing' },
     { path: 'contact', label: 'Contact' }
   ];
+
   constructor(private router: Router) {}
 
 }
