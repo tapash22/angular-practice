@@ -13,6 +13,7 @@ export const routes: Routes = [
       import('./home/home.component').then((m) => m.HomeComponent),
     data: {
       animate: 'home',
+      index:0
     },
   },
   {
@@ -21,6 +22,7 @@ export const routes: Routes = [
       import('./build/build.component').then((m) => m.BuildComponent),
     data: {
       animate: 'build',
+      index:1
     },
   },
   {
@@ -29,6 +31,7 @@ export const routes: Routes = [
       import('./working/working.component').then((m) => m.WorkingComponent),
     data: {
       animate: 'working',
+      index:2
     },
   },
   {
@@ -39,6 +42,7 @@ export const routes: Routes = [
       ),
     data: {
       animate: 'portfolio',
+      index:3
     },
   },
   {
@@ -47,6 +51,7 @@ export const routes: Routes = [
       import('./working/working.component').then((m) => m.WorkingComponent),
     data: {
       animate: 'working',
+      index:4
     },
   },
   {
@@ -55,6 +60,7 @@ export const routes: Routes = [
       import('./resume/resume.component').then((m) => m.ResumeComponent),
     data: {
       animate: 'resume',
+      index:5
     },
   },
   {
@@ -63,6 +69,7 @@ export const routes: Routes = [
       import('./pricing/pricing.component').then((m) => m.PricingComponent),
     data: {
       animate: 'pricing',
+      index:6
     },
   },
   {
@@ -71,6 +78,7 @@ export const routes: Routes = [
       import('./contact/contact.component').then((m) => m.ContactComponent),
     data: {
       animate: 'contact',
+      index:7
     },
   },
   {

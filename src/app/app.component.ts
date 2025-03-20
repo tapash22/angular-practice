@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
-import {  NavigationStart, Router, RouterOutlet } from '@angular/router';
+import { NavigationStart, Router, RouterOutlet } from '@angular/router';
 import { NavigationComponent } from './navigation/navigation.component';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { FooterComponent } from './footer/footer.component';
-import { trigger,style,animate, transition, group, query } from '@angular/animations';
+import {
+  trigger,
+  transition,
+} from '@angular/animations';
 import { delay } from 'rxjs';
+import { commonTransition } from './shared/animations';
 
 @Component({
   selector: 'app-root',
@@ -13,28 +17,8 @@ import { delay } from 'rxjs';
   styleUrl: './app.component.css',
   animations: [
     trigger('routeAnimation', [
-      transition('* <=> *', [
-        style({ position: 'relative' }), 
-        group([
-          query(':enter, :leave', [
-            style({
-              position: 'absolute',
-              width: '100%',
-              top: 0,
-              left: 0,
-            }),
-          ], { optional: true }),
-
-          query(':enter', [
-            style({ transform: 'translateY(100%)', opacity: 0 }),
-            animate('500ms ease-out', style({ transform: 'translateY(0)', opacity: 1 }))
-          ], { optional: true }),
-
-          query(':leave', [
-            animate('500ms ease-in', style({ transform: 'translateY(-100%)', opacity: 0 }))
-          ], { optional: true }),
-        ])
-      ])
+      transition(':increment', commonTransition()),
+      transition(':decrement', commonTransition(true)),
     ])
   ]
 })
@@ -73,8 +57,13 @@ export class AppComponent {
     }
   }
 
-  getRouterOutletState(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animate']
+  // getRouterOutletState(outlet: RouterOutlet) {
+  //   return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animate']
+  // }
+
+  getRouterOutletState(outlet: RouterOutlet): number | null {
+    return outlet && outlet.activatedRouteData
+      ? outlet.activatedRouteData['index']
+      : null;
   }
-  
 }
