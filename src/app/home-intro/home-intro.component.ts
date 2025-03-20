@@ -1,26 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HomeIntroComponent } from '../home-intro/home-intro.component';
+import { SocialMediaComponent } from '../social-media/social-media.component';
 
 @Component({
-  selector: 'app-home',
-  imports: [CommonModule,HomeIntroComponent],
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  selector: 'app-home-intro',
+  imports: [CommonModule,SocialMediaComponent],
+  templateUrl: './home-intro.component.html',
+  styleUrl: './home-intro.component.css'
 })
-export class HomeComponent implements OnInit {
-  portfolio_image = './images/portfolio.png'
+export class HomeIntroComponent implements OnInit {
 
-  socialIcons: string[] = ['fa-facebook', 'fa-linkedin', 'fa-square-instagram'];
-  textArray: string[] = ['Developer', 'Designer', 'Freelancer', 'Creator'];
-  currentIndex: number = 0;
+  @Input() welcome_message: string = ''
+  @Input() details_info: string = ''
+  @Input() colors: string[]=[]
+  @Input() socialIcons: string[] =[]
+  @Input() textArray:string[]=[]
+
   letterArray: { char: string, color: string }[] = [];
   isRemoving: boolean = false;
+  currentIndex: number = 0;
   wordColor: string = '';
-  welcome_message = 'Welcome to my world'
-  details_info = "  A professional front-end developer with a passion for building responsive, high-performance websites and applications. With expertise in HTML, CSS, JavaScript, and modern web technologies, I focus on creating seamless, user-friendly, and visually engaging digital experiences."
-
-  colors: string[] = ['#FF5733', '#33FF57', '#3357FF', '#F333FF', '#FFD700', '#FF1493', '#00FFFF'];
+  social_media_title='find with me'
+  personal_link_title='best skill on'
 
   ngOnInit(): void {
     this.initializeLetters();

@@ -1,0 +1,26 @@
+<div class="home-block">
+    <p class="home-title">
+        {{welcome_message}}
+    </p>
+
+    <h2 class="home-name">
+        Hi, I’m Tapash Paul
+        <br />
+        a
+        <span class="home-name-uppercase">
+            <span *ngFor="let letter of letterArray; let i = index"
+                class="letter-animation"
+                [ngStyle]="{'color': letter.color}"
+                [style.animationDelay]="isRemoving ? (0.1 * (letterArray.length - i)) + 's' : (i * 0.1) + 's'">
+                {{ letter.char }}
+            </span>
+        </span>
+    </h2>
+
+    <p class="home-details">
+        {{details_info}}
+    </p>
+    <app-social-media [social_media_title]="social_media_title"
+        [personal_link_title]="personal_link_title"
+        [socialIcons]="socialIcons"></app-social-media>
+</div>

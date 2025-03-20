@@ -1,0 +1,26 @@
+<div class="home-link-list ">
+    <div class="home-social-list">
+        <h6 class="home-tag-title">
+            {{social_media_title}}
+        </h6>
+        <ul class="home-social-list-block">
+            <li *ngFor="let icon of socialIcons"
+                class="home-social-list-block-li">
+                <i class="home-social-list-block-li-icon fa-brands"
+                    [ngClass]="icon"></i>
+            </li>
+        </ul>
+    </div>
+    <div class="home-skill-list">
+        <h6 class="home-tag-title">
+            {{personal_link_title}}
+        </h6>
+        <ul class="home-social-list-block">
+            <li *ngFor="let icon of socialIcons"
+                class="home-social-list-block-li">
+                <i class="home-social-list-block-li-icon fa-brands"
+                    [ngClass]="icon"></i>
+            </li>
+        </ul>
+    </div>
+</div>
