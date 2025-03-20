@@ -34,7 +34,7 @@
 
 /* navigation */
 .navigation {
-  @apply bg-transparent w-full flex justify-between align-middle h-20 p-2  shadow-sm shadow-sm;
+  @apply bg-transparent w-full flex justify-between items-center bg-red-500 h-20 p-2 border-b-1 border-gray-800;
 }
 
 /* navigatiion image */
