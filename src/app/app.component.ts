@@ -14,7 +14,7 @@ import { delay } from 'rxjs';
   animations: [
     trigger('routeAnimation', [
       transition('* <=> *', [
-        style({ position: 'relative' }), // Prevents layout shifts
+        style({ position: 'relative' }), 
         group([
           query(':enter, :leave', [
             style({
@@ -74,7 +74,7 @@ export class AppComponent {
   }
 
   getRouterOutletState(outlet: RouterOutlet) {
-    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animate'];
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animate']
   }
   
 }
