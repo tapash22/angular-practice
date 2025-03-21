@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Portfolio } from '../data-model';
+import { CardComponent } from '../card/card.component';
 
 @Component({
   selector: 'app-portfolio',
-  imports: [CommonModule],
+  imports: [CommonModule,CardComponent],
   templateUrl: './portfolio.component.html',
   styleUrl: './portfolio.component.css'
 })
@@ -13,7 +15,7 @@ image2 = './images/p1.jpg'
 image3 = './images/p2.jpg'
 
 
-demoList:any[]=[
+demoList:Portfolio[]=[
   {
     id:1,
     name:'development',

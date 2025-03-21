@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Project } from '../data-model';
+import { CardComponent } from '../card/card.component';
 
 @Component({
   selector: 'app-working',
-  imports: [CommonModule],
+  imports: [CommonModule,CardComponent],
   templateUrl: './working.component.html',
   styleUrl: './working.component.css',
 })
@@ -13,7 +15,7 @@ export class WorkingComponent {
   image2='./images/react.jpg'
   image3='./images/angular.jpg'
 
-  projectList:any[] = [
+  projectList:Project[] = [
     { name: 'Vue.js', type: 'Frontend Framework', image: this.image1 , description:'working with this last 4 years' },
     { name: 'React.js', type: 'Frontend Framework', image: this.image2, description:'working with this last 3 years' },
     { name: 'Angular', type: 'Frontend Framework', image:this.image3 , description:'working with this last 2 years' },
