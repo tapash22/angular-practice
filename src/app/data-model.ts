@@ -16,4 +16,11 @@ export interface Portfolio{
     count:number
 }
 
+export interface PricingPlan {
+    name: string
+    price: string
+    features: string[]
+    dalivery: string[]
+  }
+
 export type DataType = Project[] | Portfolio[]

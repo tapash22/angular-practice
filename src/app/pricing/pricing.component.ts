@@ -1,14 +1,17 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { PricingPlan } from '../data-model';
+import { SinglePricingComponent } from '../single-pricing/single-pricing.component';
 
 @Component({
   selector: 'app-pricing',
-  imports: [CommonModule],
+  imports: [CommonModule, SinglePricingComponent],
   templateUrl: './pricing.component.html',
   styleUrl: './pricing.component.css',
 })
 export class PricingComponent {
-  pricingData = [
+
+  pricingData:PricingPlan[] = [
     {
       name: 'Basic',
       price: '$19/month',
@@ -26,6 +29,7 @@ export class PricingComponent {
         'Design With XD',
         'Plugins/Extensions',
       ],
+      dalivery:['3 Days Delivery','ultimate revision']
     },
     {
       name: 'Pro',
@@ -44,6 +48,7 @@ export class PricingComponent {
         'Design With XD',
         'Plugins/Extensions',
       ],
+      dalivery:['3 Days Delivery','ultimate revision']
     },
     {
       name: 'Enterprise',
@@ -62,8 +67,11 @@ export class PricingComponent {
         'Design With XD',
         'Plugins/Extensions',
       ],
+      dalivery:['3 Days Delivery','ultimate revision']
     },
   ];
+  title: string ='pricing'
+  sub_title: string = 'My pricing'
 
   activeTab = 1;
 }

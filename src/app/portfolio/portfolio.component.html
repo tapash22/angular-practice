@@ -1,13 +1,8 @@
 <div class="w-full py-5">
     <div class="portfolio px-10">
-        <h6 class="portfolio-title">
-            Visit my portfolio and keep your feedback
-        </h6>
-        <h2 class="portfolio-tag">
-            My Portfolio
-        </h2>
+        <app-page-header [title]="title"
+            [sub_title]="sub_title"></app-page-header>
         <app-card [dataType]="demoList"></app-card>
-
     </div>
 
 </div>
