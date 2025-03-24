@@ -8,22 +8,26 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <div class="body">
-  <div class="main">
-    <app-navigation></app-navigation>
+  <ng-container *ngIf="loading; else mainContent">
+    <app-lottie-anitation></app-lottie-anitation>
+  </ng-container>
+  <ng-template #mainContent>
+    <div class="main">
+      <app-navigation></app-navigation>
 
-    <!-- Correct way to use FontAwesome in Angular -->
-    <!-- <fa-icon [icon]="faCoffee" class="w-10 h-10 text-red-600"></fa-icon>
+      <!-- Correct way to use FontAwesome in Angular -->
+      <!-- <fa-icon [icon]="faCoffee" class="w-10 h-10 text-red-600"></fa-icon>
 <fa-icon [icon]="faCoffee" style="width: 50px; height: 50px; color: brown;"></fa-icon> -->
 
-<div class="routing-container">
-  <div class="routing" [@routeAnimation]="getRouterOutletState(outlet)" >
-    <router-outlet #outlet="outlet" ></router-outlet>
-  </div>
-</div>
+      <div class="routing-container">
+        <div class="routing" [@routeAnimation]="getRouterOutletState(outlet)">
+          <router-outlet #outlet="outlet"></router-outlet>
+        </div>
+      </div>
 
-
-    <app-footer></app-footer>
-  </div>
+      <app-footer></app-footer>
+    </div>
+  </ng-template>
 </div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->

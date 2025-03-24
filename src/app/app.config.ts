@@ -4,7 +4,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { importProvidersFrom } from '@angular/core';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { provideLottieOptions } from 'ngx-lottie';
-// import { loadAnimation } from 'lottie-web';
 
 import { routes } from './app.routes';
 
@@ -14,8 +13,6 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(routes),
     provideAnimations(),
-    provideLottieOptions({
-      player: () => import('lottie-web'), // Dynamically import lottie-web
-    }),
+    provideLottieOptions({ player: () => import('lottie-web') }) // Configure Lottie player
   ],
 };

@@ -3,16 +3,18 @@ import { NavigationStart, Router, RouterOutlet } from '@angular/router';
 import { NavigationComponent } from './navigation/navigation.component';
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { FooterComponent } from './footer/footer.component';
+import { CommonModule } from '@angular/common';
 import {
   trigger,
   transition,
 } from '@angular/animations';
 import { delay } from 'rxjs';
 import { commonTransition } from './shared/animations';
+import { LottieAnitationComponent } from './lottie-anitation/lottie-anitation.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, NavigationComponent, FooterComponent],
+  imports: [RouterOutlet, NavigationComponent, FooterComponent,LottieAnitationComponent,CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   animations: [
@@ -26,6 +28,7 @@ export class AppComponent {
   title = 'angular-practice';
   faCoffee = faCoffee;
   isDarkMode = false;
+  loading = true
 
   previousRoute: string = '';
   currentRoute: string = '';
@@ -65,5 +68,11 @@ export class AppComponent {
     return outlet && outlet.activatedRouteData
       ? outlet.activatedRouteData['index']
       : null;
+  }
+
+  ngOnInit() {
+    setTimeout(() => {
+      this.loading = false; // Hide preloader after 3 seconds
+    }, 3000);
   }
 }
