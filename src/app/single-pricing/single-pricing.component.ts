@@ -6,8 +6,9 @@ import { CommonModule } from '@angular/common';
   selector: 'app-single-pricing',
   imports: [CommonModule],
   templateUrl: './single-pricing.component.html',
-  styleUrl: './single-pricing.component.css'
+  styleUrl: './single-pricing.component.css',
 })
 export class SinglePricingComponent {
-@Input() pricingData : PricingPlan[] =[]
+  @Input() pricingData: PricingPlan[] = [];
+  @Input() activeTab: number = 1;
 }
