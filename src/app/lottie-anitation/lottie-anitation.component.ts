@@ -12,7 +12,7 @@ export class LottieAnitationComponent {
 
   lottieOptions = {
     // path: 'animation/animation.json', 
-    path:'animation/preloader.json',
+    path:'animation/time.json',
     loop: true,
     autoplay: true,
     background:'red'
