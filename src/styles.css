@@ -5,7 +5,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .body {
   background: linear-gradient(145deg, #1e2024, #23272b);
   width: 100%;
@@ -15,14 +14,6 @@
   align-items: center
 }
 
-.main {
-  padding: 20px;
-  background: transparent;
-  display: block;
-  position: relative;
-  width: 100%;
-  height: auto;
-}
 
 .routing {
   width: 100%;
@@ -30,6 +21,10 @@
   padding: 0;
   margin: 0;
   display: block
+}
+
+.main{
+@apply w-full p-5 bg-transparent h-auto relative block;
 }
 
 /* navigation */
