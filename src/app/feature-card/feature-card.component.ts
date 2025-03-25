@@ -1,16 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FeatureCardComponent } from '../feature-card/feature-card.component';
 
 @Component({
-  selector: 'app-build',
-  imports: [CommonModule, FeatureCardComponent],
-  templateUrl: './build.component.html',
-  styleUrl: './build.component.css'
+  selector: 'app-feature-card',
+  imports: [CommonModule],
+  templateUrl: './feature-card.component.html',
+  styleUrl: './feature-card.component.css',
 })
-export class BuildComponent {
-  // socialIcons: string[] = ['fa-facebook', 'fa-linkedin', 'fa-square-linkedin'];
-
+export class FeatureCardComponent {
 
   cardList:any[]=[
     {

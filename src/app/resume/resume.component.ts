@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { PageHeaderComponent } from '../page-header/page-header.component';
 
 @Component({
   selector: 'app-resume',
-  imports: [],
+  imports: [PageHeaderComponent],
   templateUrl: './resume.component.html',
   styleUrl: './resume.component.css'
 })

@@ -1,3 +1,5 @@
+
+<div class="layout">
     <app-page-header [title]="title" [sub_title]="sub_title"></app-page-header>
     <div class="contact-body ">
         <div class="contact-card ">
@@ -38,7 +40,7 @@
                     <h6 class="home-tag-title">
                         Find with me
                     </h6>
-                    <ul class="home-social-list-block" >
+                    <ul class="home-social-list-block">
                         <li *ngFor="let icon of socialIcons"
                             class="home-social-list-block-li">
                             <i class="home-social-list-block-li-icon fa-brands"
@@ -79,7 +81,7 @@
                         <textarea class="field-input"
                             [(ngModel)]="formData.message" name="message">
 
-                        </textarea>
+                      </textarea>
                     </div>
                 </div>
                 <div class="w-full  h-auto my-4">
@@ -92,3 +94,4 @@
 
         </div>
     </div>
+</div>
