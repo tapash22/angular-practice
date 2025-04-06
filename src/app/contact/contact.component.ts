@@ -3,6 +3,14 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PageHeaderComponent } from '../page-header/page-header.component';
 
+interface Contact{
+  name:string
+  email:string
+  subject:string
+  message: string
+  phone:string
+}
+
 @Component({
   selector: 'app-contact',
   imports: [CommonModule,FormsModule,PageHeaderComponent],
@@ -17,7 +25,7 @@ export class ContactComponent {
   title:string = 'contact'
   sub_title:string = 'contact with me'
 
-  formData:any={
+  formData:Contact={
     name:'',
     email:'',
     subject:'',

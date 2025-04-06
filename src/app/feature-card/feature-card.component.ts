@@ -1,5 +1,12 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+export interface Card{
+  id:number
+  name:string
+  icon:string
+  details:string
+}
 
 @Component({
   selector: 'app-feature-card',
@@ -9,7 +16,7 @@ import { CommonModule } from '@angular/common';
 })
 export class FeatureCardComponent {
 
-  cardList:any[]=[
+  cardList:Card[]=[
     {
       id:1,
       name:'Web development',

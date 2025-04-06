@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FeatureCardComponent } from '../feature-card/feature-card.component';
+import { Card } from '../feature-card/feature-card.component';
 
 @Component({
   selector: 'app-build',
@@ -12,7 +13,7 @@ export class BuildComponent {
   // socialIcons: string[] = ['fa-facebook', 'fa-linkedin', 'fa-square-linkedin'];
 
 
-  cardList:any[]=[
+  cardList:Card[]=[
     {
       id:1,
       name:'Web development',

@@ -4,6 +4,7 @@ import { Project } from './worker.model';
 
 // Initial state with project list
 export interface ProjectState {
+  /** Please declare this */
   projects: Project[];
 }
 
