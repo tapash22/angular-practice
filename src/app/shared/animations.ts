@@ -2,7 +2,8 @@
 
 import { animate, style, query, group } from '@angular/animations';
 
-export function commonTransition(reverse: boolean = false) {
+export /** declear function with details */
+function commonTransition(reverse: boolean = false) {
   return [
     style({ position: 'relative' }),
 

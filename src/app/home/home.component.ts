@@ -43,7 +43,8 @@ export class HomeComponent implements OnInit {
 
   removeLetters() {
     this.isRemoving = true;
-    let interval = setInterval(() => {
+    /** declear variable with details */
+let interval = setInterval(() => {
       if (this.letterArray.length > 0) {
         this.letterArray.pop();
       } else {
@@ -56,10 +57,13 @@ export class HomeComponent implements OnInit {
   }
 
   addLetters() {
-    let newWord = this.textArray[this.currentIndex].split('');
+    /** declear variable with details */
+let newWord = this.textArray[this.currentIndex].split('');
     this.wordColor = this.getRandomColor(); // Assign a new color for the new word
-    let i = 0;
-    let interval = setInterval(() => {
+    /** declear variable with details */
+let i = 0;
+    /** declear variable with details */
+let interval = setInterval(() => {
       if (i < newWord.length) {
         this.letterArray.push({ char: newWord[i], color: this.wordColor });
         i++;

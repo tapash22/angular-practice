@@ -10,10 +10,13 @@ import { PageHeaderComponent } from '../page-header/page-header.component';
 export class ResumeComponent {
 
   downloadFile() {
-    const fileUrl = './cv/cv.pdf'; 
-    const fileName = 'cv.pdf';
+    /** declear variable with details */
+const fileUrl = './cv/cv.pdf'; 
+    /** declear variable with details */
+const fileName = 'cv.pdf';
 
-    const link = document.createElement('a');
+    /** declear variable with details */
+const link = document.createElement('a');
     link.href = fileUrl;
     link.download = fileName;
     document.body.appendChild(link);

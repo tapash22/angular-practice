@@ -18,7 +18,8 @@ export const initialState: ProjectState = {
   ]
 };
 
-export const projectReducer = createReducer(
+export /** declear variable with details */
+const projectReducer = createReducer(
   initialState,
   on(addProject, (state, { project }) => ({
     ...state,

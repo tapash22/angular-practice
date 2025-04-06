@@ -34,7 +34,8 @@ export class AppComponent {
   currentRoute: string = '';
   constructor(private router: Router) {
     // Check localStorage for theme preference
-    const storedTheme = localStorage.getItem('theme');
+    /** declear variable with details */
+const storedTheme = localStorage.getItem('theme');
     this.isDarkMode = storedTheme === 'dark';
     this.updateTheme();
 

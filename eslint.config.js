@@ -18,24 +18,25 @@ export default [
       jsdoc: jsdoc,
     },
     rules: {
-      // TypeScript recommended rules
+      // TypeScript recommended
       ...tseslint.configs.recommended.rules,
 
       // JSDoc rules
       'jsdoc/require-jsdoc': [
-        'warn',
+        'warn', 
         {
           require: {
-            FunctionDeclaration: true,       // Functions
-            FunctionExpression: true,        // Function expressions
-            ArrowFunctionExpression: true,  // Arrow functions
-            MethodDefinition: true,         // Method definitions
-            ClassDeclaration: true,         // Class declarations
+            FunctionDeclaration: true,   // Enforce JSDoc for functions
+            MethodDefinition: true,      // Enforce JSDoc for methods
+            VariableDeclarator: true,    // Enforce JSDoc for variables
+            IfStatement: true,           // Enforce JSDoc for conditionals like if statements
+            ForStatement: true,          // Enforce JSDoc for loops
+            WhileStatement: true,        // Enforce JSDoc for while loops
           },
         },
       ],
-      'jsdoc/require-param': 'warn',  // Require param documentation
-      'jsdoc/require-returns': 'warn',  // Require return documentation
+      'jsdoc/require-param': 'warn',
+      'jsdoc/require-returns': 'warn',
     },
   },
 ];
